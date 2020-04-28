@@ -1,0 +1,21 @@
+<form [formGroup]="loginForm" (ngSubmit)="OnClick()">
+    <label>
+        Domain:
+        <select formControlName="fcDomain">
+            <option value="Select">--Select--</option>
+            <option value="FM">FM</option>
+            <option value="Europa">Europa</option>
+        </select>
+    </label>
+    <label>
+        User Name:
+        <input type="text" class="control" formControlName="fcUserName">
+    </label>
+
+    <label>
+        Password:
+        <input type="text" class="control" formControlName="fcUserPwd">
+    </label>
+
+    <button type="submit" [disabled]="loginForm.invalid" (click)="OnClick()" formcontrolName="fcbtnSubmit">Submit</button>
+</form>
