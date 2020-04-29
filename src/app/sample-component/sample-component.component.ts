@@ -1,7 +1,7 @@
 import { APIService } from './../Services/GlobalService/api/global.api.service';
 import { LogConsole } from './../Services/GlobalService/Log/log-console';
 import { LogMaster } from './../Services/GlobalService/Log/global-logging.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { LogType } from '../Services/GlobalService/Log/log-constants';
 
@@ -11,12 +11,15 @@ import { LogType } from '../Services/GlobalService/Log/log-constants';
   styleUrls: ['./sample-component.component.css']
 })
 export class SampleComponentComponent implements OnInit {
-
+ 
   constructor(private logEntry: LogMaster
     , private logConsole: LogConsole
     , private apiService: APIService
     , private fb: FormBuilder
   ) { }
+
+  @Input() frmName: string="Login Page";
+  //@Output() someEvent: new EventEmitter<string>();  
 
   loginForm: FormGroup;
   ngOnInit(): void {

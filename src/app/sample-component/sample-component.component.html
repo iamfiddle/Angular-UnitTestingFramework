@@ -1,3 +1,4 @@
+<app-sample-child [formName]="frmName"></app-sample-child>
 <form [formGroup]="loginForm" (ngSubmit)="OnClick()">
     <label>
         Domain:
@@ -17,5 +18,5 @@
         <input type="text" class="control" formControlName="fcUserPwd">
     </label>
 
-    <button type="submit" [disabled]="loginForm.invalid" (click)="OnClick()" formcontrolName="fcbtnSubmit">Submit</button>
+    <button type="submit" [disabled]="loginForm.invalid" (click)="OnClick()" formcontrolName="fcbtnSubmit">Submit</button>   
 </form>

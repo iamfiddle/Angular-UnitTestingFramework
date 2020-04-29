@@ -10,11 +10,13 @@ import { LogApi } from './Services/GlobalService/Log/log-api';
 import { LogConsole } from './Services/GlobalService/Log/log-console';
 import { SampleComponentComponent } from './sample-component/sample-component.component';
 import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { SampleChildComponent } from './sample-child/sample-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SampleComponentComponent
+    SampleComponentComponent,
+    SampleChildComponent
   ],
   imports: [
     BrowserModule,

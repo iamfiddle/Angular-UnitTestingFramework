@@ -6,17 +6,20 @@ import { LogConsole } from './../Services/GlobalService/Log/log-console';
 import { LogMaster } from './../Services/GlobalService/Log/global-logging.service';
 import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { SampleComponentComponent } from './sample-component.component';
+import { SampleChildComponent } from '../sample-child/sample-child.component';
+import { By } from '@angular/platform-browser';
 
 describe('Component: GeneralComponent', () => {
   let component: SampleComponentComponent;
   let fixture: ComponentFixture<SampleComponentComponent>;
+  let childFixture:ComponentFixture<SampleChildComponent>;
   let apiService: APIService;
   let submitEl: any;
-
+  
   beforeEach(async(
     () => {
       TestBed.configureTestingModule({
-        declarations: [SampleComponentComponent],
+        declarations: [SampleComponentComponent, SampleChildComponent],
         providers: [LogMaster, LogConsole, APIService, ConstantService, FormBuilder],
         imports: [HttpClientModule, ReactiveFormsModule]
       })
@@ -25,6 +28,8 @@ describe('Component: GeneralComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SampleComponentComponent);
+    childFixture = TestBed.createComponent(SampleChildComponent);
+
     component = fixture.componentInstance;
 
     fixture.detectChanges();
@@ -88,5 +93,12 @@ describe('Component: GeneralComponent', () => {
     component.OnClick();
     expect(component.payload).toEqual(JSON.stringify({}));
     expect(component.payload).not.toBeUndefined();
+  });
+  
+  it('should pass properties to child properly', ()=>{
+    let childDebugElement = fixture.debugElement.query(By.directive(SampleChildComponent));
+    expect(childDebugElement).toBeTruthy();
+    const childEl = childDebugElement.queryAll(By.css('h2'))[0].nativeElement.innerHTML;
+    expect(childEl).toBe('Login Page');
   });
 });
