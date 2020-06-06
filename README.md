@@ -43,6 +43,18 @@ I have used the following standard steps while wriing UT cases using Jasmine:
     >Using standard assertion functions like toBeTruthy(), toBeFalsy() and Spies like spyOn(), and.callThrough(), 
     and.returnValue(), and.callFake()
 
+## Code Coverage
+
+I have created the code coverage report using [istanbul-instrumenter-loader] and [karma-mocha-reporter], to see individual test coverage of components and services.
+Please follow following steps to install "istanbul" for teamcity:
+
+* npm install --save-dev karma-teamcity-reporter
+* ng test --code-coverage --reporters=teamcity,coverage-istanbul
+* Add require('karma-teamcity-reporter') under list of plugins in karma.conf.js file
+
+To see overall test coverage statistics just type the following command in  Angular CLI
+*ng test --code-coverage
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
