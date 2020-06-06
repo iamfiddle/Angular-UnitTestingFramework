@@ -31,16 +31,16 @@ I have used the following standard steps while wriing UT cases using Jasmine:
    -This is also called setup and teardown (for cleaning up), Jasmine has few functions to make this easier-
 
     * beforeAll
-      This function is called once, before all the specs in a test suite (describe function) are run.
+      >>This function is called once, before all the specs in a test suite (describe function) are run.
     * beforeEach
-      This function is called before each test specification (it function) is run.      
+      >>This function is called before each test specification (it function) is run.      
     * afterAll
-      This function is called once after all the specs in a test suite are finished.
+      >>This function is called once after all the specs in a test suite are finished.
     * afterEach
-      This function is called after each test specification is run.
+      >>This function is called after each test specification is run.
 
 2. Arrange Act and Assert
-    Using standard assertion functions like toBeTruthy(), toBeFalsy() and Spies like spyOn(), and.callThrough(), 
+    >>Using standard assertion functions like toBeTruthy(), toBeFalsy() and Spies like spyOn(), and.callThrough(), 
     and.returnValue(), and.callFake()
 
 ## Running unit tests
