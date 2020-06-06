@@ -10,24 +10,38 @@ This project is designed and developed to demonstrate angular TDD feature and to
     -Generic Components having reactive forms approach
 3) Code Coverage reports for Teamcity using Istanbull
 
-About TDD Framework:
+## About TDD Framework:
 
 Two such tools and frameworks that are used when testing Angular is Jasmine and Karma. Jasmine is a JavaScript testing framework that supports a software development practice called Behaviour-Driven Development(BDD). It’s a specific flavour of Test-Driven Development (TDD).
 
-I have showed following feeatures of Jasmine while writing UT cases:
-1. TearUp and Tear Down
+There are 3 types of tests:
+-Unit tests
+-Integration tests
+-End-to-End (e2e) tests
 
+In this demonstration, I have focused on unit testing with Jasmine and Karma.Jasmine provides several valuable functions to write tests. The backbone or main Jasmine methods are:
 
+It(): Declaration of a particular test
+describe(): It’s a suite of tests
+expect(): Expect some value in true form
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I have used the following standard steps while wriing UT cases using Jasmine:
 
-## Code scaffolding
+1. Tear-Up and Tear-Down
+   -This is also called setup and teardown (for cleaning up), Jasmine has few functions to make this easier-
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    beforeAll
+      This function is called once, before all the specs in a test suite (describe function) are run.
+    beforeEach
+      This function is called before each test specification (it function) is run.      
+    afterAll
+      This function is called once after all the specs in a test suite are finished.
+    afterEach
+      This function is called after each test specification is run.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. Arrange Act and Assert
+    Using standard assertion functions like toBeTruthy(), toBeFalsy() and Spies like spyOn(), and.callThrough(), 
+    and.returnValue(), and.callFake()
 
 ## Running unit tests
 
