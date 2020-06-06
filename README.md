@@ -1,6 +1,13 @@
-# Kashiya
+# Angular UnitTesting Framework and Code Coverage Reporting
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+This project is developed and designed to demonstrate angular TDD feature and yo show how we can configure our angular project for code coverage through angular CLI, as part of this demonstrate following has been covered:
+1) Unit Test framework using Jasmine and Test Runner via Karma 
+2) Spec files with generic unit test cases for following:
+    -Services
+    -HTPT API's 
+    -Class's including abstract class's, functions and properties
+    -Generic Components having reactive forms approach
+3) Code Coverage reports for Teamcity using Istanbull
 
 ## Development server
 
