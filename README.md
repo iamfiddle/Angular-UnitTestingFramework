@@ -1,15 +1,23 @@
 # Angular UnitTesting Framework and Code Coverage Reporting
 
-This project is developed and designed to demonstrate angular TDD feature and yo show how we can configure our angular project for code coverage through angular CLI, as part of this demonstrate following has been covered:
+This project is designed and developed to demonstrate angular TDD feature and to show how we can configure our angular project for code coverage through angular CLI, as part of this demonstrate following has been covered:
+
 1) Unit Test framework using Jasmine and Test Runner via Karma 
-2) Spec files with generic unit test cases for following:
+2) Spec files with generic unit test cases for following-
     -Services
     -HTPT API's 
     -Class's including abstract class's, functions and properties
     -Generic Components having reactive forms approach
 3) Code Coverage reports for Teamcity using Istanbull
 
-## Development server
+About TDD Framework:
+
+Two such tools and frameworks that are used when testing Angular is Jasmine and Karma. Jasmine is a JavaScript testing framework that supports a software development practice called Behaviour-Driven Development(BDD). It’s a specific flavour of Test-Driven Development (TDD).
+
+I have showed following feeatures of Jasmine while writing UT cases:
+1. TearUp and Tear Down
+
+
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
