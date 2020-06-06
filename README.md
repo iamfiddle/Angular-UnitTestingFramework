@@ -53,7 +53,7 @@ Please follow following steps to install "istanbul" for teamcity:
 * Add require('karma-teamcity-reporter') under list of plugins in karma.conf.js file
 
 To see overall test coverage statistics just type the following command in  Angular CLI
-** ng test --code-coverage
+* ng test --code-coverage
 
 ## Running unit tests
 
