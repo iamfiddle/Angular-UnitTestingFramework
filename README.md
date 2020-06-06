@@ -3,11 +3,11 @@
 This project is designed and developed to demonstrate angular TDD feature and to show how we can configure our angular project for code coverage through angular CLI, as part of this demonstrate following has been covered:
 
 1) Unit Test framework using Jasmine and Test Runner via Karma 
-2) Spec files with generic unit test cases for following-
-    -Services
-    -HTPT API's 
-    -Class's including abstract class's, functions and properties
-    -Generic Components having reactive forms approach
+2) Spec files with generic unit test cases for following:
+    * Services
+    * HTPT API's 
+    * Class's including abstract class's, functions and properties
+    * Generic Components having reactive forms approach
 3) Code Coverage reports for Teamcity using Istanbull
 
 ## About TDD Framework:
@@ -15,28 +15,28 @@ This project is designed and developed to demonstrate angular TDD feature and to
 Two such tools and frameworks that are used when testing Angular is Jasmine and Karma. Jasmine is a JavaScript testing framework that supports a software development practice called Behaviour-Driven Development(BDD). It’s a specific flavour of Test-Driven Development (TDD).
 
 There are 3 types of tests:
--Unit tests
--Integration tests
--End-to-End (e2e) tests
+* Unit tests
+* Integration tests
+* End-to-End (e2e) tests
 
 In this demonstration, I have focused on unit testing with Jasmine and Karma.Jasmine provides several valuable functions to write tests. The backbone or main Jasmine methods are:
 
-It(): Declaration of a particular test
-describe(): It’s a suite of tests
-expect(): Expect some value in true form
+ * It(): Declaration of a particular test
+ * describe(): It’s a suite of tests
+ * expect(): Expect some value in true form
 
 I have used the following standard steps while wriing UT cases using Jasmine:
 
 1. Tear-Up and Tear-Down
    -This is also called setup and teardown (for cleaning up), Jasmine has few functions to make this easier-
 
-    beforeAll
+    * beforeAll
       This function is called once, before all the specs in a test suite (describe function) are run.
-    beforeEach
+    * beforeEach
       This function is called before each test specification (it function) is run.      
-    afterAll
+    * afterAll
       This function is called once after all the specs in a test suite are finished.
-    afterEach
+    * afterEach
       This function is called after each test specification is run.
 
 2. Arrange Act and Assert
